@@ -196,12 +196,16 @@ a {
   color: #b58900;
 }
 a:visited {
-  font-color: #4e6174;
-  <!--color: #cb4b16;-->
+  color: #4e6174;
 }
 a:hover {
   color: #cb4b16;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    display: inline;
+}
+
 h1 {
   color: #d33682;
   text-align: center;
