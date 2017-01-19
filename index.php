@@ -3,9 +3,10 @@
 		<title>Index - natfan.github.io</title>
 		<link rel="stylesheet" href="stylesheet.css">
 	</head>
-		
+
 	<title>natfan.github.io</title>
 	<body>
+		<?php include("includes/header.html"); ?>
 		<div class="headline center">
 			<h1>NATFAN</h1><h6>.github.io</h6>
 		</div>
@@ -31,5 +32,6 @@
 			playing vidya. Luckily, I'm not so lazy as to never do any work at all
 			<i><a href="https://ryankrage77.github.io">cough cough</i></a>, so I get some work done.</p>
 		</div>
+		<?php include("includes/footer.html"); ?>
 	</body>
 </html>
