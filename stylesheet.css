@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata);			
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans);
 @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
 
@@ -196,7 +196,8 @@ a {
   color: #b58900;
 }
 a:visited {
-  color: #4e6174;
+  /*color: #4e6174;*/
+  color: #cb4b16;
 }
 a:hover {
   color: #cb4b16;
