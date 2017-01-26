@@ -2,10 +2,12 @@
 	<link rel="stylesheet" href="stylesheet.css">
 </head>
 
-# List of Creepy Guys
+<h6>List of Creepy Guys</h6>
 
-*The following is a list of guys who are reported to be creepy.*
+<p><i>The following is a list of guys who are reported to be creepy.</i></p>
 
-* Ashcon - General stalkeryness, consistantly messaging girls after they have blantantly requested that he stops, allegedly obtained and bragged about pornography involving minors.
-* Simon - Apparent inability to pick up on social queues, will continue to message people after they read messges but do not respond.
-* Dale
+<ul>
+	<li>Ashcon - General stalkeryness, consistantly messaging girls after they have blantantly requested that he stops, allegedly obtained and bragged about pornography involving minors.
+	<li>Simon - Apparent inability to pick up on social queues, will continue to message people after they read messges but do not respond.
+	<li>Dale - Lying and manipulation of facts. Basically Donald Trump's press team, elaborating on a few different "alternate facts" at once.
+</ul>
