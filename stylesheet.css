@@ -333,3 +333,17 @@ table, th, td #trans {
 	border: 0px;
 	/*margin-left: 5%;*/
 }
+
+
+.target {
+    width:50%;
+    height:200px;
+    border:solid black 1px; 
+}
+.target > div {
+    display:none;
+}
+
+.target > div:target{
+    display:block;
+}
