@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ranks - Store - CubeCraft Games</title>
+
+    <link href="//cdn.cubecraft.net/store/2016/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.cubecraft.net/store/2016/css/theme.css?231984651321" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    
+    <style>
+	#loading_cover{
+		position: fixed;
+		top:0px;
+		left:0px;
+
+		z-index: 9999999999999;
+
+		width:100%;
+		height:100%;
+
+		background: #176093;
+	}
+
+	#loading_container{
+		position:absolute;
+		top: 50%;
+		left: 50%;
+
+		margin-top: -88px;
+		margin-left: -75px;
+	}
+	#white_cube{
+		position:absolute;
+		top:0px;
+		left:0px;
+
+		width:150px;
+		height:150px;
+
+		z-index: 2;
+
+		background-image: url('//store-assets.cubecraft.net/img/white_cube.png');
+	}
+	#coloured_cube{
+		position:absolute;
+		top:0px;
+		left:0px;
+
+		width:150px;
+		height:176px;
+
+		z-index: 1;
+
+		background-image: url('//store-assets.cubecraft.net/img/coloured_cube.png');
+	}
+</style>
+    
+    <style>
+        @font-face {
+            font-family: 'Minecraft Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Minecraft Regular'), url('//cdn.cubecraft.net/fonts/minecraftfont.woff') format('woff');
+        }
+    </style>
+    
+    <link rel="apple-touch-icon"    sizes="57x57"       href="//cdn.cubecraft.net/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon"    sizes="60x60"       href="//cdn.cubecraft.net/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon"    sizes="72x72"       href="//cdn.cubecraft.net/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon"    sizes="76x76"       href="//cdn.cubecraft.net/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon"    sizes="114x114"     href="//cdn.cubecraft.net/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon"    sizes="120x120"     href="//cdn.cubecraft.net/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon"    sizes="144x144"     href="//cdn.cubecraft.net/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon"    sizes="152x152"     href="//cdn.cubecraft.net/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon"    sizes="180x180"     href="//cdn.cubecraft.net/favicons/apple-touch-icon-180x180.png">
+    <link rel="icon"                type="image/png"    href="//cdn.cubecraft.net/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon"                type="image/png"    href="//cdn.cubecraft.net/favicons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon"                type="image/png"    href="//cdn.cubecraft.net/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon"                type="image/png"    href="//cdn.cubecraft.net/favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon"                type="image/png"    href="//cdn.cubecraft.net/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest"                                href="//cdn.cubecraft.net/favicons/manifest.json">
+    <link rel="shortcut icon"                           href="//cdn.cubecraft.net/favicons/favicon.ico">
+    <meta name="msapplication-TileColor"                content="#176093">
+    <meta name="msapplication-TileImage"                content="//cdn.cubecraft.net/favicons/mstile-144x144.png">
+    <meta name="msapplication-config"                   content="//cdn.cubecraft.net/favicons/browserconfig.xml">
+    <meta name="theme-color"                            content="#176093">
+
+    
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="//cdn.cubecraft.net/js/jquery.min.js"></script>  
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>-->
+    
+        
+    <script src="//cdn.cubecraft.net/store/2016/js/bootstrap.min.js"></script>
+    <script src="//cdn.cubecraft.net/store/2016/js/store.js"></script>
+    <script src="//cdn.cubecraft.net/store/2016/js/mineparse.js"></script>
+    <script src="/assets/js/jail.js"></script> 
+    <script src="/assets/js/skin.js"></script>  
+    
+    <script>
+        document.domain = "cubecraft.net";
+    </script>
+    
+  </head>
+
+  <body id="app-layout">
+
+    
+    <!-- Mini Sites Nav -->
+    <nav class="navbar navbar-cubecraft navbar-fixed-top" style="z-index:1000;">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a href="https://cubecraft.net" class="button navbar-toggle collapsed" style="color:#ffffff;">
+                    Main Website <i class='fa fa-fw fa-angle-right'></i>
+                </a>
+                <a class="navbar-brand" href="/">
+                    <img src="//cdn.cubecraft.net/store/2016/img/logo.png" height="40px"/>
+                </a>
+            </div>
+    
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right navbar-nav-cubecraft">
+                	<li>
+                		<a href="https://cubecraft.net">
+                		Main Website <i class='fa fa-fw fa-angle-right'></i>
+                		</a>
+                	</li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+    
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Store Submenu -->
+    <div id="cubecraft-store-submenu" style="margin-top:70px;" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse navbar-menubuilder" id="store_sub_menu">
+                <ul class="nav navbar-nav navbar-left" id="ccgn_store_subnav_items" style="display:none;">
+                    <li class=""><a href="/">Store Home</a></li>
+                    <li class="active" id="ranks_category_button"><a href="/category/60093">Ranks</a></li>
+                                                                                                                                                                                                                      <li class="" id="rank_up_button"><a href="#" id="rank_up_link">Rank Upgrades</a></li>
+                                                                                                                                                                        <li class=""><a href="/category/339775">Point Multipliers</a></li>
+                                                                                                                                            <li class=""><a href="/category/559237">Miniatures</a></li>
+                                                                                                                                                                          </ul>
+                                    <script>
+                        $.get( "https://store-assets.cubecraft.net/player_lookup/rank/?uuid=018ef3ac75bc45c9b956f664057b19c9", function( data ) {
+                            console.log( 'Rank: '+data );
+                            if(data=="none"){
+                                $('#rank_up_button').hide();
+                            }else if(data=="highest"){
+                                $('#ranks_category_button').hide();
+                                $('#rank_up_button').hide();
+                            }else{
+                                $('#ranks_category_button').hide();
+                                $("#rank_up_link").prop("href", data);
+                            }
+                        });
+                    </script>
+                                
+                    <script>
+                        $('#ccgn_store_subnav_items').fadeIn();
+                    </script>
+                
+                <ul class="nav navbar-nav navbar-right" style="padding:0px;">
+                    <li style="color:#ffffff; padding:0px;" data-toggle="modal" data-target="#currency_selector">
+                        <a href="javascript:return false;" class="tooltip-help" title="Click to change your currency."><span  style="background-color:#5bc0de; border:1px solid #46b8da; border-radius:5px; padding:5px;">Store Currency: GBP (<span class="currency_symbol_GBP"></span>)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Page Wrapper -->
+    <div id="page-wrapper">
+        <div class="container" id="main" style="margin-top:20px;">
+        
+            <div class="row" style="display:none;">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="header">
+                                <div class="checkout">
+                                     
+                                        <div class="btn-group">
+                                            <a href="/checkout/logout" class="btn btn-danger btn-no-custom">Logout</a>
+                                        </div>
+                                                                        <div class="btn-group">
+                                        <button class="btn dropdown-toggle btn-no-custom" data-toggle="dropdown">GBP</button>
+                                        <ul class="dropdown-menu" role="menu" style="width:70px; min-width:0;">
+                                                                                                                                                <li >
+                                                        <a href="?currency=AUD">AUD</a>
+                                                    </li>
+                                                                                                                                                                                                <li >
+                                                        <a href="?currency=BRL">BRL</a>
+                                                    </li>
+                                                                                                                                                                                                <li >
+                                                        <a href="?currency=CAD">CAD</a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            <li >
+                                                        <a href="?currency=DKK">DKK</a>
+                                                    </li>
+                                                                                                                                                                                                <li >
+                                                        <a href="?currency=EUR">EUR</a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li >
+                                                        <a href="?currency=NOK">NOK</a>
+                                                    </li>
+                                                                                                                                                                                                <li >
+                                                        <a href="?currency=NZD">NZD</a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            <li >
+                                                        <a href="?currency=PLN">PLN</a>
+                                                    </li>
+                                                                                                                                                                                                <li class="active">
+                                                        <a href="?currency=GBP">GBP</a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                            <li >
+                                                        <a href="?currency=SEK">SEK</a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <li >
+                                                        <a href="?currency=USD">USD</a>
+                                                    </li>
+                                                                                                                                    </ul>
+                                    </div>
+                                    <div class="btn-group">
+                                                                                    <a href="#" class="btn btn-info btn-no-custom" disabled="disabled"><i class="icon-shopping-cart icon-white"></i> <span class="currency_symbol_GBP"></span>0 item(s) for 0.00 GBP</a>
+                                                                            </div>
+                                     
+                                </div>
+                                <!-- //checkout -->
+                            </div>
+                            <!-- //header -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //row -->
+
+            <div class="row">
+                <div class="col-xs-12">
+                        
+    <style>
+        .rank-col{
+            padding:3px;
+        }
+
+         .rank-row{
+            padding:12px;
+         }
+
+        .rank-section-header{
+            background:#cccccc;
+            color:#ffffff;
+            padding:1px;
+        }
+        
+        li.borderless-top {
+            border-top: 0 none;
+            border-radius:0px;
+        }
+
+        li.borderless-bottom {
+            border-bottom: 0 none;
+            border-radius:0px;
+        }
+        .list-group>li{
+            border-left: 0 none;
+            border-right: 0 none;
+        }
+
+        .iron-colour{
+            color:#A1A1A1;
+        }
+        .lapiz-colour{
+            color:#0000AA;
+        }
+        .gold-colour{
+            color:#FCE300;
+        }
+        .diamond-colour{
+            color:#05CAED;
+        }
+        .emerald-colour{
+            color:#03C700;
+        }
+        .obsidian-colour{
+            color:#AA00AA;
+        }
+        
+        .pvp_section{
+            background:#e03d24;
+        }
+        
+        .skywars_section{
+            background:#61b246;
+        }
+        
+        .eggwars_section{
+            background:#705095;
+        }
+        
+        .tower_defence_section{
+            background:#d8a928;
+        }
+        
+        .blockwars_section{
+            background:#4d549b;
+        }
+        .luckyislands_section{
+            background:#e8db01;
+        }
+        .survivalgames_section{
+            background:#2e5c2e
+        }
+        
+        .rank-feature-no{
+            color:#cccccc;
+        }
+
+        .rank-bg-lapiz{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dbf0ff+0,5f55ba+100 */
+            background: #dbf0ff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f5f5f5 0%, #0000AA 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f5f5f5 0%,#0000AA 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f5f5f5 0%,#0000AA 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#0000AA',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        .rank-bg-gold{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fff2db+0,ffd387+100 */
+            background: #fff2db; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f5f5f5 0%, #FCE300 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f5f5f5 0%,#FCE300 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f5f5f5 0%,#FCE300 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#FCE300',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        .rank-bg-diamond{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dbf7ff+0,afedff+100 */
+            background: #dbf7ff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f5f5f5 0%, #05CAED 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f5f5f5 0%,#05CAED 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f5f5f5 0%,#05CAED 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#05CAED', endColorstr='#05CAED',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        .rank-bg-emerald{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cae0c0+0,9fdd82+100 */
+            background: #cae0c0; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f5f5f5 0%, #03C700 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f5f5f5 0%,#03C700 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f5f5f5 0%,#03C700 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#03C700',GradientType=0 ); /* IE6-9 */
+
+        }
+
+        .rank-bg-obsidian{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3dbff+0,d891ff+100 */
+            background: #f3dbff; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f5f5f5 0%, #AA00AA 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #f5f5f5 0%,#AA00AA 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #f5f5f5 0%,#AA00AA 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#AA00AA',GradientType=0 ); /* IE6-9 */
+
+        }
+
+    </style>
+    
+    
+        <!-- This is for the main ranks page -->
+    
+                    <script>
+                $.get( "https://store-assets.cubecraft.net/player_lookup/rank/?uuid=018ef3ac75bc45c9b956f664057b19c9", function( data ) {
+                    if(data!="none"){
+                        if(data=="highest"){
+                            window.location="/category/698749";
+                        }else{
+                            window.location=data;
+                        }
+                    }
+                });
+            </script>
+                
+    
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h1 class="text-center" style="margin-bottom:5px;">Ranks</h1>
+                        <p style="margin:0px 0px 10px;font-family:'Open Sans', Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;"><span style="font-family:arial, helvetica, sans-serif;line-height:20.8px;"><span style="font-family:tahoma, geneva, sans-serif;">Ranks give you access to loads of awesome stuff. They make you stand out from normal players, give you extra features and access to epic cosmetics</span></span><span style="font-family:arial, helvetica, sans-serif;line-height:20.8px;">.</span></p>
+
+<p style="margin:0px 0px 10px;font-family:'Open Sans', Arial, sans-serif;font-size:14px;line-height:20px;text-align:center;"><span style="font-family:arial, helvetica, sans-serif;line-height:1.6em;">Scroll down to view all information and click </span><strong style="font-family:arial, helvetica, sans-serif;line-height:1.6em;">"Buy [Lifetime]"</strong><span style="font-family:arial, helvetica, sans-serif;line-height:1.6em;"> for full details about that rank.</span></p>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4">
+                		                        <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Your Basket
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    
+                                    <div class="media">
+                                        <div class="media-left media-middle">
+                                            <img class="media-object center-block"  style="max-height:60px;" src="https://api.cubecraft.net/skins/index.php?a=0&w=33&wt=-5&abg=20&abd=-47&ajg=-8&ajd=12&ratio=10&format=png&displayHairs=true&headOnly=false&user=CacheCache" alt="CacheCache Skin">
+                                        </div>
+                                        <div class="media-body text-center">
+                                            <h4 class="media-heading">Welcome CacheCache!</h4>
+                                            Not CacheCache? <a href="/checkout/logout" style="text-decoration:underline;">Click here to Logout.</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:5px;">
+                                <div class="col-xs-12 text-center">
+                                                                            There are no items in your basket.
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                            </div>
+        </div>
+    
+        <div class="row rank-row">
+            <!-- Iron Rank 0 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/0cdfa2c2b2923ee9996252f489216636f9689f11.png" width="128px"/><br>
+                        <h3 class="rank-name">Iron</h3>
+                        <div class="rank-price">
+    
+                                                                                            14.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="iron-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Iron]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var ironRank = mineParse('§7§k:§r§7Iron§k:§r ');
+                                    $('#iron-rank-chat').html(ironRank.parsed);
+                                </script>
+                            </li>
+                            <li class="list-group-item"><span class="iron-colour" style="font-weight: bold;">Grey</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">1 Weekly Bonus</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><br>20 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!">15 Exclusive Items</a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">2 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/94308');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+    
+             <!-- Lapiz Rank 1 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/388f774c6b1e6aeafb0e355fda200ca5a3437683.png" width="128px"/><br>
+                        <h3 class="rank-name">Lapiz</h3>
+                        <div class="rank-price">
+    
+                                                                                            24.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="lapiz-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Lapiz]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var lapizRank = mineParse('§1§k:§r§1Lapiz§k:§r');
+                                    $('#lapiz-rank-chat').html(lapizRank.parsed);
+                                </script>
+                            </li>
+                            <li class="list-group-item"><span class="lapiz-colour" style="font-weight: bold;">Blue</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">2 Weekly Bonuses</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><br>30 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!">22 Exclusive Items</a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">3 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Health Boost</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/94543');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+    
+             <!-- Gold Rank 2 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/367e7b4ea54736516263699eb79879463a7bb89c.png" width="128px"/><br>
+                        <h3 class="rank-name">Gold</h3>
+                        <div class="rank-price">
+    
+                                                                                            34.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="gold-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Gold]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var goldRank = mineParse('§e§k:§r§eGold§k:§r ');
+                                    $('#gold-rank-chat').html(goldRank.parsed);
+                                </script>
+                            </li>
+                            <li class="list-group-item"><span class="gold-colour" style="font-weight: bold;">Gold</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">3 Weekly Bonuses</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><br>40 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!">30 Exclusive Items</a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">4 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Health Boost</li>
+                            <li class="list-group-item">Vote for Item Types</li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</i></li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/94557');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+    
+             <!-- Diamond Rank 3 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/0b88394a8d740f0a52bfaab972061332833f7084.png" width="128px"/><br>
+                        <h3 class="rank-name">Diamond</h3>
+                        <div class="rank-price">
+    
+                                                                                            54.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="diamond-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Diamond]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var diamondRank = mineParse('§b§k:§r§bDiamond§k:§r');
+                                    $('#diamond-rank-chat').html(diamondRank.parsed);
+                                </script>
+                            </li>
+                            <li class="list-group-item"><span class="diamond-colour" style="font-weight: bold;">Aqua</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item"><i class='fa fa-fw fa-times-circle rank-feature-no'></i></li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">4 Weekly Bonuses</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><br>50 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!">40 Exclusive Items</a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">5 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item">Vote for Chest Types</li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Health Boost</li>
+                            <li class="list-group-item">Vote for Item Types</li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Modifiers</li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</i></li>
+                            <li class="list-group-item">Vote for Chest Types</i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/307573');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+    
+             <!-- Emerald Rank 4 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/04d8840fb181665109c04b79109a2fa931dbf57b.png" width="128px"/><br>
+                        <h3 class="rank-name">Emerald</h3>
+                        <div class="rank-price">
+    
+                                                                                            89.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="emerald-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Emerald]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var emeraldRank = mineParse('§a§k:§r§aEmerald§k:§r');
+                                    $('#emerald-rank-chat').html(emeraldRank.parsed);
+                                </script>
+                            </li>                        <li class="list-group-item"><span class="emerald-colour" style="font-weight: bold;">Green</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item">Fly in Lobbies</li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">5 Weekly Bonuses</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><br>70 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!">46 Exclusive Items</a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">6 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item">Vote for Chest Types</li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Health Boost</li>
+                            <li class="list-group-item">Vote for Item Types</li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Modifiers</li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</i></li>
+                            <li class="list-group-item">Vote for Chest Types</i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/307816');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+    
+             <!-- Obsidian Rank 5 -->
+            <div class="rank-col col-sm-6 col-md-4 col-lg-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading text-center">
+                        <img src="//dunb17ur4ymx4.cloudfront.net/packages/images/058dc50c0eedee0d26fd46402b0f0402f86cabb5.png" width="128px"/><br>
+                        <h3 class="rank-name">Obsidian</h3>
+                        <div class="rank-price">
+    
+                                                                                            139.99 GBP
+                                                    </div>
+                    </div>
+                    <div class="panel-body" style="padding:0px;">
+                        <ul class="list-group text-center" style="margin:0px; border-radius: 0px;">
+                            <li class="list-group-item rank-section-header borderless-top">General Perks</li>
+                            <li class="list-group-item">
+                                <span id="obsidian-rank-chat" style="font-family: Minecraft Regular;">
+                                    [Obsidian]
+                                </span><br>
+                                Chat Prefix
+                                <script>
+                                    var obsidianRank = mineParse('§5§k:§r§5Obsidian§k:§r');
+                                    $('#obsidian-rank-chat').html(obsidianRank.parsed);
+                                </script>
+                            </li>                        <li class="list-group-item"><span class="obsidian-colour" style="font-weight: bold;">Purple</span><br> Coloured Name<br>in Tab List</li>
+                            <li class="list-group-item">Fly in Lobbies</li>
+                            <li class="list-group-item">Coloured Chat</li>
+                            <li class="list-group-item">6 Weekly Bonuses</li>
+                            <li class="list-group-item"><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><i class="fa fa-user"></i><br>100 Friend Slots</li>
+                            <li class="list-group-item"><a href="javascript:return false;" class="tooltip-help" style="cursor: help;" title="Exclusive vanity items including Hats, Gadgets, Trails, Miniatures and other cool cosmetics!"><strong>52+ Exclusive Items</strong></a></li>
+                            <li class="list-group-item rank-section-header pvp_section">PvP</li>
+                            <!-- //<li class="list-group-item">7 Custom PvP Kits</li> -->
+                            <li class="list-group-item">1v1 Kit Selection</li>
+                            <li class="list-group-item rank-section-header skywars_section">SkyWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item">Vote for Chest Types</li>
+                            <li class="list-group-item rank-section-header eggwars_section">EggWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Health Boost</li>
+                            <li class="list-group-item">Vote for Item Types</li>
+                            <li class="list-group-item rank-section-header tower_defence_section">Tower Defence</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item rank-section-header blockwars_section">BlockWars</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Modifiers</li>
+                            <li class="list-group-item rank-section-header luckyislands_section">Lucky Islands</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</li>
+                            <li class="list-group-item rank-section-header survivalgames_section">Survival Games</li>
+                            <li class="list-group-item">Map selection</li>
+                            <li class="list-group-item">Vote for Time</i></li>
+                            <li class="list-group-item">Vote for Chest Types</i></li>
+                        </ul>
+                    </div>
+                    <div class="panel-footer text-center" style="padding:0px;">
+                                                    <a href="javascript:void(0);" onClick="showModal('/package/836910');" role="button" class="btn btn-small btn-info" style="width:100%; border:0px;"><i class='fa fa-fw fa-shopping-cart'></i> Buy [Lifetime]</a>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    
+                    </div>
+            </div>
+            <!-- //row -->
+
+        </div>
+        <!-- //container -->
+    </div>
+
+
+
+    <div class="container-fluid footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 hidden-xs">
+                    <div class="language">
+                        
+                    </div>
+                </div>
+                <div class="col-sm-3 col-xs-12">
+                    <h3 class="footer-header">Play</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://store.cubecraft.net/" target="_blank" class="grey-link">Store</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h3 class="footer-header">Connect</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://cubecraft.net" class="grey-link">Forums</a></li>
+                        <li><a href="https://twitter.com/cubecraftgames" target="_blank" class="grey-link">Twitter</a></li>
+                        <li><a href="https://facebook.com/cubecraftgames" target="_blank" class="grey-link">Facebook</a></li>
+                        <li><a href="https://twitch.tv/ccgn" target="_blank" class="grey-link">Twitch</a></li>
+                        <li><a href="https://youtube.com/c/ccgn" target="_blank" class="grey-link">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-xs-6">
+                    <h3 class="footer-header">Support</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.cubecraft.net/threads/official-rules.41864/" class="grey-link">Rules</a></li>
+                        <li><a href="https://www.cubecraft.net/forums/report-a-player.24/" class="grey-link">Report a Player</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#6615070a03152605130403051407001248080312" class="grey-link">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center" style="font-size:10px; color:#ffffff; margin-top:10px;">
+                "Minecraft" is a trademark of Mojang Synergies AB. "CubeCraft Games" is a trademark of Digital Tree Media Ltd. CubeCraft Games is not affiliated in anyway with Mojang Synergies AB.<br>
+                All product and company names are trademarks(&trade;) or registered (&reg;) trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.<br>
+                All specifications are subject to change without notice. Digital Tree Media is a company registered in England and Wales, Company Number: 08979146, VAT Number: GB213841137.<br>
+                Registered office 21 Broad Street, Bury, BL9 0DA, United Kingdom.
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid footer-footer text-right">
+        &copy; CubeCraft Games 2016 - <a href="javascript:void(0);" onClick="showModal('/terms');" class="grey-link">Terms & Policies</a> - <a href="#" class="grey-link" data-toggle="modal" data-target="#language_selector">Language</a>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="popupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="popupModal_content">
+
+            </div>
+        </div>
+    </div>
+
+
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"ade4f02621","applicationID":"31217205","transactionName":"ZQAEZUBYWBVTBRZbXlxKJ1JGUFkIHSUDRlRVChRIHVBYAlce","queueTime":0,"applicationTime":40,"atts":"SUcHEwhCSxs=","errorBeacon":"bam.nr-data.net","agent":""}</script><script>/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/\>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>
+          <script>
+            $.get( "https://store-assets.cubecraft.net/sidebar/?uuid=018ef3ac75bc45c9b956f664057b19c9", function( data ) {
+                if(data!=""){
+                    $('#sidebar_dynamic').html(data);
+                    $('#sidebar_dynamic').fadeIn();
+                }else{
+                    $('#default_featured_package').fadeIn();
+                }
+            });
+        </script>
+    
+  <script>
+        // Buycraft Doesn't support currency symbols so this is my hack around it!
+        $(function() {
+            $(".currency_symbol_GBP").html('&pound;');
+            $(".currency_symbol_EUR").html('&euro;');
+            $(".currency_symbol_USD").html('$');
+            $(".currency_symbol_AUD").html('$');
+            $(".currency_symbol_BRL").html('R$');
+            $(".currency_symbol_CAD").html('$');
+            $(".currency_symbol_DKK").html('&#x6b;&#x72;');
+            $(".currency_symbol_NOK").html('&#x6b;&#x72;');
+            $(".currency_symbol_NZD").html('$');
+            $(".currency_symbol_PLN").html('&#x7a;&#x142;');
+            $(".currency_symbol_SEK").html('&#x6b;&#x72;');
+            
+            $(".buycraft_username").html('CacheCache');
+        
+            var flash_class = "flash";
+            var flash_count = 0;
+            setInterval(function() {
+                if (flash_count == 0) {
+                    $('.' + flash_class).css('color', "#000000");
+                    flash_count = 1;
+                } else {
+                    $('.' + flash_class).css('color', "#ff0000");
+                    flash_count = 0;
+                }
+              }, 1000);
+        });
+        
+        function replace_usernames(){
+            $(".buycraft_username").html('CacheCache');
+        }
+        
+        
+  </script>
+
+  
+</html>
