@@ -6,3 +6,5 @@ RewriteMap lc int:tolower
 
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 RewriteRule ^([^\.]+)$ $1.md [NC,L]
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule ^(.*\.aspx)$ ${lc:$1} [L,NC]
