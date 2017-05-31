@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     directionX: 'center',
     directionY: 'center'
   });
-  var intro = document.getElementById('intro');
+  var intro = document.getElementById('404');
   intro.style.marginTop = - intro.offsetHeight / 2 + 'px';
 }, false);
 

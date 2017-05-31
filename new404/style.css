@@ -3,19 +3,19 @@ CSS Reset
 http://meyerweb.com/eric/tools/css/reset/
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html.inner, body.inner, div.inner, span.inner, applet.inner, object.inner, iframe.inner,
+h1.inner, h2.inner, h3.inner, h4.inner, h5.inner, h6.inner, p.inner, blockquote.inner, pre.inner,
+a.inner, abbr.inner, acronym.inner, address.inner, big.inner, cite.inner, code.inner,
+del.inner, dfn.inner, em.inner, img.inner, ins.inner, kbd.inner, q.inner, s.inner, samp.inner,
+small.inner, strike.inner, strong.inner, sub.inner, sup.inner, tt.inner, var.inner,
+b.inner, u.inner, i.inner, center.inner,
+dl.inner, dt.inner, dd.inner, ol.inner, ul.inner, li.inner,
+fieldset.inner, form.inner, label.inner, legend.inner,
+table.inner, caption.inner, tbody.inner, tfoot.inner, thead.inner, tr.inner, th.inner, td.inner,
+article.inner, aside.inner, canvas.inner, details.inner, embed.inner,
+figure.inner, figcaption.inner, footer.inner, header.inner, hgroup.inner,
+menu.inner, nav.inner, output.inner, ruby.inner, section.inner, summary.inner,
+time.inner, mark.inner, audio.inner, video.inner {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,44 +23,44 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article.inner, aside.inner, details.inner, figcaption.inner, figure.inner,
+footer.inner, header.inner, hgroup.inner, menu.inner, nav.inner, section.inner {
   display: block;
 }
-body {
+body.inner {
   line-height: 1;
 }
-ol, ul {
+ol.inner, ul.inner {
   list-style: none;
 }
-blockquote, q {
+blockquote.inner, q.inner {
   quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote.inner:before, blockquote.inner:after,
+q.inner:before, q.inner:after {
   content: '';
   content: none;
 }
-table {
+table.inner {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* particleground demo */
 
-* {
+*.inner {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-html, body {
+html.inner, body.inner {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-body {
+body.inner {
   /*background: #16a085;*/
   background: #073642;
   font-family: 'Montserrat', sans-serif;
@@ -92,13 +92,13 @@ body {
   text-align: center;
   color: #fff;
 }
-h1 {
+h1.inner {
   text-transform: uppercase;
   font-size: 85px;
   font-weight: 700;
   letter-spacing: 0.015em;
 }
-h1::after {
+h1.inner::after {
   content: '';
   width: 80px;
   display: block;
@@ -107,11 +107,11 @@ h1::after {
   margin: 30px auto;
   line-height: 1.1;
 }
-p {
+p.inner {
   margin: 0 0 30px 0;
   font-size: 24px;
 }
-.btn {
+.btninner {
   display: inline-block;
   padding: 15px 30px;
   border: 2px solid #fff;
@@ -127,22 +127,22 @@ p {
        -o-transition: all 0.4s;
           transition: all 0.4s;
 }
-.btn:hover {
+.btninner:hover {
   color: #5CBDAA;
   border-color: #5CBDAA;
 }
 
 @media only screen and (max-width: 1000px) {
-  h1 {
+  h1.inner {
     font-size: 70px;
   }
 }
 
 @media only screen and (max-width: 800px) {
-  h1 {
+  h1.inner {
     font-size: 48px;
   }
-  h1::after {
+  h1.inner::after {
     height: 8px;
   }
 }
@@ -151,25 +151,25 @@ p {
   #intro {
     padding: 0 10px;
   }
-  h1 {
+  h1.inner {
     font-size: 30px;
   }
-  h1::after {
+  h1.inner::after {
     height: 6px;
   }
-  p {
+  p.inner {
     font-size: 18px;
   }
-  .btn {
+  .btninner {
     font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  h1 {
+  h1.inner {
     font-size: 28px;
   }
-  h1::after {
+  h1.inner::after {
     height: 4px;
   }
 }
