@@ -4,12 +4,12 @@
 ## PIV: Designing an Interactive Website
 ### Moodboard & Storyboard
 The following image is my storyboard for the website that can double up as a moodboard:
-<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/storyboard.png" alt="storyboard" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/storyboard.png" alt="storyboard" style="width: 50%;">
 
 ### Site Template & Colour Scheme
 The following is my site template:
 
-<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/sitetemplate.png" alt="storyboard" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/sitetemplate.png" alt="storyboard" style="width: 50%;">
 
 As you can see, the colour scheme that I am using is blue and teal. This is because it invokes a calm and peaceful emotional response from the reader, and makes them think of beaches, waves and relaxing times.
 
@@ -20,7 +20,7 @@ For my website I shall be using two assets, as follows:
 
 * Redruth Map - A map by Ordinance Survey, a national map agency that covers all of Great Britain. It has been supplied Wikimedia, a free, open-source information website that allowed me access to the image. It is available for reuse as it is copyrighted under the Creative Commons licence, which allows for non-commercial redistribution.
 
-<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/site/redruth.png" alt="redruth map" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/site/redruth.png" alt="redruth map" style="width: 50%;">
 
 ### Outline of Content
 The following is a basic outline of the content that I am planning on having in my website:
@@ -94,7 +94,7 @@ The following code is from the Header and Sidebar.
 
 And now here is what the Header & Sidebar actually look like:
 
-![header](header.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/header.png" alt="header" style="width: 50%;">
 
 <div style="page-break-after: always;"></div>
 
@@ -120,8 +120,7 @@ The following is the code for the Overview segment.
 ```
 This is the output of that code.
 
-![overview](overview.png)
-
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/overview.png" alt="overview" style="width: 50%;">
 
 <div style="page-break-after: always;"></div>
 
@@ -154,7 +153,7 @@ The following is the code for the History segment.
 ```
 This is the output.
 
-![history](history.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/history.png" alt="history" style="width: 50%;">
 
 <div style="page-break-after: always;"></div>
 
@@ -237,7 +236,7 @@ This is what the Attraction's HTML is:
       </div>
 ```
 This is the output:
-![attractions](attractions.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/attractions.png" alt="attractions" style="width: 50%;">
 
 ### Map
 This is what the Map's HTML is:
@@ -267,7 +266,7 @@ This is what the Map's HTML is:
 ```
 And this is the output document:
 
-![map](map.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/map.png" alt="map" style="width: 50%;">
 
 As you can see, the map is broken currently.
 
@@ -311,7 +310,7 @@ The following is the code for the Frequently Asked Questions:
 
 And the following is the output:
 
-![faq](faq.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/faq.png" alt="faq" style="width: 50%;">
 
 <div style="page-break-after: always;"></div>
 
@@ -343,7 +342,7 @@ One final technology is server side scripting. This can allow users to interact 
 ## MIII: Improving the Effectiveness of the Website
 There were two main improvements that needed to be performed to the website to make set it to a publishable state, the first being to fix the map. The main issue with this was that the webpage was hosted on a local server which did not have JavaScript installed, whereas if I viewed the code as a file the JavaScript would work. The following is an image of the working version of the website with the map working:
 
-![map fixed](map_fixed.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/map_fixed.png" alt="map fixed" style="width: 50%;">
 
 The other improvement was that I should add some copyright text to the bottom of the website to prevent theft of my data. The following was the code for this copyright text:
 
@@ -369,11 +368,11 @@ And the following is the code for the updated navbar
 
 This is the Contact text:
 
-![contact](contact.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/contact.png" alt="contact" style="width: 50%;">
 
 And this is the updated navbar:
 
-![updated navbar](updated_navbar.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/updated_navbar.png" alt="updated_navbar" style="width: 50%;">
 
 <div style="page-break-after: always;"></div>
 
@@ -405,7 +404,7 @@ a:hover {
 
 Menus should also highlight the current place in which a user is in, so that they know where they are in position to other links. The following is an example screenshot from my personal website, https://natfan.github.io/
 
-![bold links](n.gh.io.png)
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/n.gh.io.png" alt="natfan.github.io" style="width: 50%;">
 
 The reason why THINGDEX is emboldened is because all things that are not either the home page, the about page or the contact page are placed under the Thingdex in alphabetical order.
 
