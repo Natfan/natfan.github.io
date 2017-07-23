@@ -236,6 +236,7 @@ This is what the Attraction's HTML is:
       </div>
 ```
 This is the output:
+
 <img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/attractions.png" alt="attractions" style="width: 50%;">
 
 ### Map
@@ -402,7 +403,7 @@ a:hover {
 }
 ```
 
-Menus should also highlight the current place in which a user is in, so that they know where they are in position to other links. The following is an example screenshot from my personal website, https://natfan.github.io/
+Menus should also highlight the current place in which a user is in, so that they know where they are in position to other links. The following is an example screenshot from my personal website, <a>https://natfan.github.io/</a>
 
 <img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/n.gh.io.png" alt="natfan.github.io" style="width: 50%;">
 
