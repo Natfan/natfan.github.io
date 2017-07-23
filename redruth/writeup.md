@@ -4,12 +4,12 @@
 ## PIV: Designing an Interactive Website
 ### Moodboard & Storyboard
 The following image is my storyboard for the website that can double up as a moodboard:
-<img src="https://github.com/Natfan/work/raw/master/b/28/2/storyboard.png" alt="storyboard" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/storyboard.png" alt="storyboard" style="width: 50%;"></img>
 
 ### Site Template & Colour Scheme
 The following is my site template:
 
-<img src="https://github.com/Natfan/work/raw/master/b/28/2/sitetemplate.png" alt="storyboard" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/sitetemplate.png" alt="storyboard" style="width: 50%;"></img>
 
 As you can see, the colour scheme that I am using is blue and teal. This is because it invokes a calm and peaceful emotional response from the reader, and makes them think of beaches, waves and relaxing times.
 
@@ -20,7 +20,7 @@ For my website I shall be using two assets, as follows:
 
 * Redruth Map - A map by Ordinance Survey, a national map agency that covers all of Great Britain. It has been supplied Wikimedia, a free, open-source information website that allowed me access to the image. It is available for reuse as it is copyrighted under the Creative Commons licence, which allows for non-commercial redistribution.
 
-<img src="https://github.com/Natfan/work/raw/master/b/28/2/site/redruth.png" alt="redruth map" style="width: 50%;"></img>
+<img src="https://raw.githubusercontent.com/Natfan/work/master/b/28/2/site/redruth.png" alt="redruth map" style="width: 50%;"></img>
 
 ### Outline of Content
 The following is a basic outline of the content that I am planning on having in my website:
