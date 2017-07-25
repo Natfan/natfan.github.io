@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel><title>Blog - natfan.github.io</title><link>https://natfan.github.io/blog/blog.html</link>
+<description>Natfan's Personal Blog</description><language>en</language>
+<lastBuildDate>Tue, 25 Jul 2017 22:41:24 +0100</lastBuildDate>
+<pubDate>Tue, 25 Jul 2017 22:41:24 +0100</pubDate>
+<atom:link href="https://natfan.github.io/blog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+This is a test post, please ignore.
+</title><description><![CDATA[
+
+<p>Hello, world. This is a test!</p>
+
+<p>Tags: <a href='tag_these.html'>these</a>, <a href='tag_are.html'>are</a>, <a href='tag_test.html'>test</a>, <a href='tag_tags.html'>tags</a></p>
+<!-- text end -->
+<p id='twitter'><a href='http://twitter.com/intent/tweet?url=https://natfan.github.io/blog/this-is-a-test-post-please-ignore.html&text=&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;&via=NathanWindisch'>Comments? Tweet</a> 
+<a href='https://twitter.com/search?q=https://natfan.github.io/blog/this-is-a-test-post-please-ignore.html'><span id='count-30264'></span></a>&nbsp;</p>
+]]></description><link>https://natfan.github.io/blog/this-is-a-test-post-please-ignore.html</link>
+<guid>https://natfan.github.io/blog/./this-is-a-test-post-please-ignore.html</guid>
+<dc:creator>Nathan Windisch</dc:creator>
+<pubDate>Tue, 25 Jul 2017 22:41:17 +0100</pubDate></item>
+</channel></rss>
