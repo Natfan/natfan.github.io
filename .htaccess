@@ -8,3 +8,4 @@ RewriteMap lc int:tolower
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 RewriteRule ^([^\.]+)$ $1.md [NC,L]
 RewriteRule ^([^\.]+)$ ${lc:$1} [L,NC]
+RewriteRule ^(.*[^/])$ /$1/ [L,R]
