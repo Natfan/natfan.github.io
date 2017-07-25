@@ -31,7 +31,7 @@ global_variables() {
     # You can use Twitter or Facebook or anything for global_author_url
     global_author_url="https://twitter.com/NathanWindisch" 
     # Your email
-    global_email="natfangaming@gmail.com"
+    global_email=""
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
     global_license="CC by-nc-nd"
