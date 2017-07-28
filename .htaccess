@@ -8,6 +8,7 @@ RewriteMap lc int:tolower
 
 RewriteRule ^([^\.]+)$ ${lc:$1} [L,NC]
 RewriteRule ^(.*[^/])$ /$1 [L,R] # <- for test, for prod use [L,R=301]
+RewriteRule ^(.*\.html)$ $1 [L,R] # <- for test, for prod use [L,R=301]
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
