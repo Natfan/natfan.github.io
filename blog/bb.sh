@@ -56,7 +56,7 @@ global_variables() {
     global_twitter_search="twitter"
 
     # Change this to your disqus username to use disqus for comments
-    global_disqus_username=""
+    global_disqus_username="natfan"
 
 
     # Blog generated files
