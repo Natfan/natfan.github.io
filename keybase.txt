@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/natfan
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://natfan.github.io
+  * I am natfan (https://keybase.io/natfan) on keybase.
+  * I have a public key ASDblDUhdxZ2xJzW1XDfCT3rvHdKEyzx6MQ8bn2D_GK66Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120db943521771676c49cd6d570df093debbc774a132cf1e8c43c6e7d83fc62bae90a",
+      "host": "keybase.io",
+      "kid": "0120db943521771676c49cd6d570df093debbc774a132cf1e8c43c6e7d83fc62bae90a",
+      "uid": "cea4e9de4b5c598b47517f1cd91a4e19",
+      "username": "natfan"
+    },
+    "merkle_root": {
+      "ctime": 1501119333,
+      "hash": "9735e039d738fa9783550a616ea07e2c3b9a93de169db00cb2e18e702049b00fa6102bc0c9c287504f0a78e797b7ac15c2c00a0e993245c26ef2eb3072e861a2",
+      "hash_meta": "0ec8b350a264bc2637083d4f2bd7fe4733c1615014f67d861f2f43721ee4fc8f",
+      "seqno": 1283641
+    },
+    "service": {
+      "hostname": "natfan.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.25"
+  },
+  "ctime": 1501119350,
+  "expire_in": 504576000,
+  "prev": "c6474ae362c4f945a17f3075ecd5179f26f38193fcf395f93da0900f35655b99",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg25Q1IXcWdsSc1tVw3wk967x3ShMs8ejEPG59g/xiuukKp3BheWxvYWTFA0d7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZGI5NDM1MjE3NzE2NzZjNDljZDZkNTcwZGYwOTNkZWJiYzc3NGExMzJjZjFlOGM0M2M2ZTdkODNmYzYyYmFlOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZGI5NDM1MjE3NzE2NzZjNDljZDZkNTcwZGYwOTNkZWJiYzc3NGExMzJjZjFlOGM0M2M2ZTdkODNmYzYyYmFlOTBhIiwidWlkIjoiY2VhNGU5ZGU0YjVjNTk4YjQ3NTE3ZjFjZDkxYTRlMTkiLCJ1c2VybmFtZSI6Im5hdGZhbiJ9LCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTUwMTExOTMzMywiaGFzaCI6Ijk3MzVlMDM5ZDczOGZhOTc4MzU1MGE2MTZlYTA3ZTJjM2I5YTkzZGUxNjlkYjAwY2IyZTE4ZTcwMjA0OWIwMGZhNjEwMmJjMGM5YzI4NzUwNGYwYTc4ZTc5N2I3YWMxNWMyYzAwYTBlOTkzMjQ1YzI2ZWYyZWIzMDcyZTg2MWEyIiwiaGFzaF9tZXRhIjoiMGVjOGIzNTBhMjY0YmMyNjM3MDgzZDRmMmJkN2ZlNDczM2MxNjE1MDE0ZjY3ZDg2MWYyZjQzNzIxZWU0ZmM4ZiIsInNlcW5vIjoxMjgzNjQxfSwic2VydmljZSI6eyJob3N0bmFtZSI6Im5hdGZhbi5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yNSJ9LCJjdGltZSI6MTUwMTExOTM1MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsInByZXYiOiJjNjQ3NGFlMzYyYzRmOTQ1YTE3ZjMwNzVlY2Q1MTc5ZjI2ZjM4MTkzZmNmMzk1ZjkzZGEwOTAwZjM1NjU1Yjk5Iiwic2Vxbm8iOjEyLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQAUc/PEa10ynLnYhYqeyBs0NRkEyCvpowym22sk3rVjXOVgGSmWqtD5sBfprqZV7o9vTEZ0ML4qIfFo1aCJGUwKoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDQdlf81yU02xgzMk+UfD98WxMM8ecYrH/cAN0l/XP2vKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/natfan
+
+==================================================================
