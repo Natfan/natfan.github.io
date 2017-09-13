@@ -1,0 +1,116 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: url(../img/bg.png);
+    background-size: cover;
+}
+
+.prof {
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #FFFFFF;
+}
+
+.prof header {
+    background: #1793D1;
+    color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.prof header .avatar {
+    display: block;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    width: 125px;
+    height: 125px;
+    background: white;
+}
+
+.prof header .bio {
+    height: 125px;
+}
+
+.prof header .bio h2 {
+    margin: 0 0 0 20px;
+    font-weight: 200;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.prof header .bio h3 {
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.71);
+}
+
+.prof header .bio p {
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+.prof main {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.prof section {
+    padding: 5px 20px;
+}
+
+.prof section h1 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 31px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.prof section p {
+    margin: 0;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.71);
+    font-size: 14px
+}
+
+.prof .links .link {
+    display: block;
+    width: 150px;
+    padding: 5px;
+    font-size: 32px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.prof .links .link:hover {
+    color: #FFFFFF;
+}
+
+.prof .links .link.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.prof .links .link.discord:hover {
+    background-color: #3d5b99;
+}
+
+.prof .links .link.github:hover {
+    background-color: #000000;
+}
+
+.prof .links .link.email:hover {
+    background-color: chocolate;
+}
