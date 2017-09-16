@@ -12,7 +12,9 @@
                 user.setShot(true);
                 while (user.isAlive()) {
                     user.setProperty("survivor");
-                    user.setShot(true)
+                }
+                if (user.hasProperty("survivor")) {
+                    user.setShot(true);
                 }
                 user.remProperty("survivor");
             }
