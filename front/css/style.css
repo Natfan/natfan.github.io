@@ -5,11 +5,23 @@ html, body {
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background: url(../img/bg.png);
+    background: url(../img/bg2.png);
+    background-color: #4e6174;
     background-size: cover;
+    filter: blur(150%) opacity(95%);
 }
 
-.prof {
+a {
+    text-decoration: none;
+    color: teal;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #7fbfbf;
+}
+
+.profile {
     width: 100%;
     max-width: 600px;
     position: absolute;
@@ -20,8 +32,8 @@ body {
     background-color: #FFFFFF;
 }
 
-.prof header {
-    background: #1793D1;
+.profile header {
+    background: #4E6174;
     color: #fdfdfd;
     display: flex;
     align-items: center;
@@ -30,87 +42,105 @@ body {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.prof header .avatar {
+.profile header .avatar {
     display: block;
     position: relative;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    /*box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);*/
     width: 125px;
     height: 125px;
-    background: white;
+    opacity: 1;
+    transition: .25s ease;
+    backface-visibility: hidden;
+    background: #4e6174;
 }
 
-.prof header .bio {
+.profile header .bio {
     height: 125px;
 }
 
-.prof header .bio h2 {
+.profile header .bio h2 {
     margin: 0 0 0 20px;
     font-weight: 200;
     font-size: 26px;
     color: rgba(255, 255, 255, 0.87);
 }
 
-.prof header .bio h3 {
+.profile header .bio h3 {
     margin: 0 20px;
     font-size: 16px;
     font-weight: 200;
     color: rgba(255, 255, 255, 0.71);
 }
 
-.prof header .bio p {
+.profile header .bio p {
     margin: 0 20px;
     font-size: 14px;
 }
 
-.prof main {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.profile ul.labels {
+	list-style: none;
+	padding-left: 20px;
 }
 
-.prof section {
-    padding: 5px 20px;
+.profile ul.labels li {
+	display: inline-block;
+	background-color: #E4E4E4;
+	border-radius: 16px;
+	padding: 7px 12px;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.6);
 }
 
-.prof section h1 {
-    margin: 0;
-    font-weight: 200;
-    font-size: 31px;
-    color: rgba(0, 0, 0, 0.87);
+
+.profile .links {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
 }
 
-.prof section p {
-    margin: 0;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.71);
-    font-size: 14px
-}
-
-.prof .links .link {
+.profile .links .link {
     display: block;
     width: 150px;
     padding: 5px;
     font-size: 32px;
     text-align: center;
-    color: rgba(0, 0, 0, 0.4);
+    /*color: rgba(0, 0, 0, 0.4);*/
+    /*color: #4E6174;*/
+    color: #000;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-.prof .links .link:hover {
+.profile .links .link:hover {
     color: #FFFFFF;
 }
 
-.prof .links .link.twitter:hover {
+.profile .links .link.discordimg {
+    width: 54%;
+    padding-top: 6%;
+    margin-left: 20%;
+}
+
+.profile .links .link.twitter:hover {
     background-color: #1DA1F2;
 }
 
-.prof .links .link.discord:hover {
-    background-color: #3d5b99;
+.profile .links .link.discord:hover {
+    background-color: #7289DA;
 }
 
-.prof .links .link.github:hover {
+.profile .links .link.github:hover {
     background-color: #000000;
 }
 
-.prof .links .link.email:hover {
-    background-color: chocolate;
+.profile .links .link.reddit:hover {
+    background-color: #FF5700;
+}
+
+.profile .links .link.telegram:hover {
+    background-color: #0088cc;
+}
+
+.profile .links .link.email:hover {
+    background-color: grey;
 }
