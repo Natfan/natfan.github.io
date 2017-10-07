@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="https://api.trello.com/1/client.js?key=bb807d95e467e3f2f20196296f529522"></script>
+
+        <script>
+            var authenticationSuccess = function() {
+                console.log('Successful authentication');
+            };
+
+            var authenticationFailure = function() {
+                console.log('Failed authentication');
+            };
+        </script>
+        <!--<script>
+
+            var listid = "598a0a207723adbcdcbf226a";
+
+            var data = JSON.stringify(false);
+
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === this.DONE) { console.log(this.responseText); }
+            });
+
+            var card = xhr.open("GET", "https://api.trello.com/1/lists/" + listid + "/cards");;
+
+            xhr.send(data);
+
+        </script>
+
+        <script>
+            var data = JSON.stringify(false);
+
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials = true;
+
+            xhr.addEventListener("readystatechange", function () {
+                if (this.readyState === this.DONE) { console.log(this.responseText); }
+            });
+
+            xhr.open("GET", "https://api.trello.com/1/cards/" + card + "?fields=name%2Cid");
+
+            xhr.send(data);
+
+            var cards = [];
+        </script>-->
+    </head>
+
+    <body>
+        <p>hello world</p>
+        <script>
+            window.Trello.authorize({
+                type: 'popup',
+                name: 'Getting Started Application',
+                scope: {
+                    read: 'true',
+                    write: 'true' },
+                expiration: 'never',
+                success: authenticationSuccess,
+                error: authenticationFailure
+            });
+
+            var form = FormApp.openById('14voKUraVvsWLbWw3lI_ApaqRk_pwLuQ3sPgYg-2aKDc');
+
+            var responses = [];
+
+            responses.add(form.gegtResponses());
+
+            var myList = '59d04eb20ec244b1522042b9';
+
+            var creationSuccess = function (data) {
+                console.log('Card created successfully.');
+                console.log(JSON.stringify(data, null, 2));
+            };
+
+            var newCard = {
+                name: 'New Test Card',
+                desc: 'This is the description of our new card.',
+                // Place this card at the top of our list
+                idList: myList,
+                pos: 'bottom'
+            };
+
+            window.Trello.post('/cards/', newCard, creationSuccess);
+        </script>
+    </body>
+</html>
